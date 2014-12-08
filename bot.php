@@ -1,4 +1,10 @@
 <?php
+#------------------------------------------------------------------------------------------#
+#  Copyright (c) Dr. R. Urban                                                              #
+#  8.12.2014                                                                               #
+#  Released under the MIT license                                                          #
+#  https://github.com/antiproton/online-chess                                              #
+#------------------------------------------------------------------------------------------#
 $fen = $_POST['Daten'];
 if ($fen == ""){$fen = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";}
 $time = microtime(1);
