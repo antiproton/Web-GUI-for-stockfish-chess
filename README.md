@@ -7,6 +7,7 @@ It is based on: chessboard.js
 https://stockfishchess.org/
 
 2. Edit bot.php
+
 $sf  = "C:/xampp/htdocs/netreal/Stockfish/src/stockfish.exe";
 
 3. Program upload
