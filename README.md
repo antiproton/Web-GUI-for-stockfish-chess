@@ -7,9 +7,7 @@ https://github.com/oakmac/chessboardjs
 1. Install stockfish
 https://stockfishchess.org/
 
-2. Edit bot.php
-
-$sf  = "C:/xampp/htdocs/netreal/Stockfish/src/stockfish.exe";
+2. Edit bot.php: $sf  = "C:/xampp/htdocs/netreal/Stockfish/src/stockfish.exe";
 
 3. Program upload
 
