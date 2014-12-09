@@ -12,6 +12,10 @@
 body,td,th {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
+	color: #666666;
+}
+body {
+	background-color: #FFFFFF;
 }
 -->
 </style></head>
@@ -26,14 +30,7 @@ body,td,th {
 <script src="js/jquery-1.10.1.min.js"></script>
 <script src="js/chessboard.js"></script>
 <script>
-
-
-
-
 var init = function() {
-
-
-
 //--- start example JS ---
 var board,
   game = new Chess();
@@ -76,6 +73,9 @@ document.getElementById('fen').innerHTML = game.fen();
   });
   
   board.position(game.fen());
+   pgn=game.pgn();
+  document.getElementById('pgn').innerHTML = pgn;
+  
   updateStatus();
 	  
   
@@ -99,7 +99,7 @@ var onDrop = function(source, target) {
   document.getElementById('pgn').innerHTML = pgn;
     updateStatus();
   setRequest(game.fen());
-  window.setTimeout(makeMove, 2000);
+  window.setTimeout(makeMove, 3000);
 };
 
 // update the board position after the piece snap
@@ -134,9 +134,12 @@ var updateStatus = function() {
     if (game.in_check() === true) {
       status += ', ' + moveColor + ' is in check';
     }
-document.getElementById('status').innerHTML = status;
 
-  }}
+
+  }
+document.getElementById('status').innerHTML = status;  
+  
+  }
 
 var cfg = {
   draggable: true,
@@ -147,13 +150,20 @@ var cfg = {
 };
 board = new ChessBoard('board', cfg);
 //--- end example JS ---
+init_neu = function() {
 
+board = new ChessBoard('board', cfg);
+$(document).ready(init);
+ 
+
+
+};
 }; // end init()
+
+
+
 $(document).ready(init);
 //---------------------------------------------------------------------
-
-
-
 </script>
 
 
@@ -169,7 +179,7 @@ $(document).ready(init);
      <h6>by Dr. R. Urban </h6></td>
    </tr>
    <tr>
-     <td align="left" valign="top"><a href="https|//github.com/antiproton/Web-GUI-for-stockfish-chess">https://github.com/antiproton/Web-GUI-for-stockfish-chess</a></td>
+     <td align="left" valign="top"><a href="https://github.com/antiproton/Web-GUI-for-stockfish-chess" target="_blank">https://github.com/antiproton/Web-GUI-for-stockfish-chess</a></td>
    </tr>
    <tr>
      <td align="left" valign="top">
@@ -185,9 +195,7 @@ $(document).ready(init);
      <td align="left" valign="top">&nbsp;</td>
    </tr>
    <tr>
-     <td align="left" valign="top"><form name="form1" method="post" action="">
-       <input type="submit" name="Submit" value="Neue Partie anfangen">
-     </form></td>
+     <td align="left" valign="top"><input type="button" onclick="init_neu()" value="init" /></td>
    </tr>
    <tr>
      <td align="left" valign="top"><a href="bot.php" target="_blank">Bot</a></td>
