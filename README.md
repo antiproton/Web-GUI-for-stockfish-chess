@@ -1,8 +1,7 @@
 Web GUI for stockfish chess
 ===========================
 Demo
-
-http://localhost/netreal/bot-chess
+(http://localhost/netreal/bot-chess)
 
 It is based on: chessboard.js
 https://github.com/oakmac/chessboardjs
