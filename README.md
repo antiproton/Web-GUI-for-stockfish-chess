@@ -12,3 +12,5 @@ https://stockfishchess.org/
 3. Program upload
 
 4. enjoy it
+
+#Demo: http://localhost/netreal/bot-chess
