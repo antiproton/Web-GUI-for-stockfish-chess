@@ -3,7 +3,7 @@
 #  Copyright (c) Dr. R. Urban                                                              #
 #  8.12.2014                                                                               #
 #  Released under the MIT license                                                          #
-#  https://github.com/antiproton/online-chess                                              #
+#  https://github.com/antiproton/                                                          #
 #------------------------------------------------------------------------------------------#
 $fen = $_POST['Daten'];
 if ($fen == ""){$fen = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";}
