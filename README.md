@@ -13,5 +13,5 @@ https://stockfishchess.org/
 
 4. enjoy it
 
-#Demo:
+Demo:
 http://localhost/netreal/bot-chess
