@@ -24,7 +24,7 @@ $cwd='./';
 
 
 $sf  = "C:/xampp/htdocs/netreal/Stockfish/src/stockfish.exe";
-#$sf  = "/kunden/homepages/38/d375266227/htdocs/netreal/Stockfish/src/stockfish";
+#$sf  = "/kunden/q/38/d375266227/htdocs/q/Stockfish/src/stockfish";
 
 
 
