@@ -1,18 +1,30 @@
 <?php
 #------------------------------------------------------------------------------------------#
 #  Copyright (c) Dr. R. Urban                                                              #
-#  8.12.2014                                                                               #
+#  10.12.2014                                                                              #
 #  Released under the MIT license                                                          #
-#  https://github.com/antiproton/                                                          #
+#  https://github.com/antiproton                                                           #
 #------------------------------------------------------------------------------------------#
+session_start();
+
+$code = $_SESSION['code'];
+
+if ($code !== "1234"){echo "Web GUI for Stockfish Chess by Dr. R. Urban"; exit;}
+
+#------------------------------------------------------------------------------------------#
+
 $fen = $_POST['Daten'];
-if ($fen == ""){$fen = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";}
+if ($fen == ""){echo "Web GUI for Stockfish Chess by Dr. R. Urban - Stockfish 061214 by Tord Romstad, Marco Costalba and Joona Kiiski ";exit;}
+
+#if ("localhost" != $_SERVER["HTTP_HOST"]){echo "no"; exit;}
+
+
 $time = microtime(1);
 $cwd='./';
 
 
 $sf  = "C:/xampp/htdocs/netreal/Stockfish/src/stockfish.exe";
-#$sf  = "/kunden/homepages/38/xxxxxxx/htdocs/xxxxx/Stockfish/src/stockfish";
+#$sf  = "/kunden/homepages/38/d375266227/htdocs/netreal/Stockfish/src/stockfish";
 
 
 
@@ -32,7 +44,7 @@ fwrite($pipes[0], "ucinewgame\n");
 fwrite($pipes[0], "isready\n");
 
 fwrite($pipes[0], "position fen $fen\n");
-fwrite($pipes[0], "go movetime 50\n");
+fwrite($pipes[0], "go movetime 500\n");
 
 $str="";
 
