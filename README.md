@@ -19,6 +19,7 @@ cd Stockfish/src
 make help
 
 make profile-build ARCH=x86-64
+
 make profile-build ARCH=x86-32
 
 ./stockfish
