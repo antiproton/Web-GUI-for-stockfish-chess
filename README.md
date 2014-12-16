@@ -6,7 +6,7 @@ Demo:
 It is based on: chessboard.js
 https://github.com/oakmac/chessboardjs
 
-1. Install stockfish
+Install stockfish
 https://stockfishchess.org/
 
 
@@ -23,9 +23,9 @@ make profile-build ARCH=x86-32
 ./stockfish
 go infinite
 
-2. Edit bot.php: $sf  = "C:/xampp/htdocs/netreal/Stockfish/src/stockfish.exe";
+Edit bot.php: $sf  = "C:/xampp/htdocs/netreal/Stockfish/src/stockfish.exe";
 
-3. Program upload
+Program upload
 
 That is all!
 
