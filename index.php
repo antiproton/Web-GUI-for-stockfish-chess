@@ -66,10 +66,7 @@ var onDragStart = function(source, piece, position, orientation) {
 var makeMove = function() {
 
 document.getElementById('fen').innerHTML = game.fen();
-
 document.getElementById('content').innerHTML = content;
-
-
 if(content == 0){setRequest(game.fen());window.setTimeout(makeMove, 6000);}
 
 
@@ -93,7 +90,7 @@ if(content == 0){setRequest(game.fen());window.setTimeout(makeMove, 6000);}
     to: zug_nach,
     promotion: 'q' // NOTE: always promote to a queen for example simplicity
   });
-
+sound();
   board.position(game.fen());
    pgn=game.pgn();
   document.getElementById('pgn').innerHTML = pgn;
@@ -123,7 +120,7 @@ var onDrop = function(source, target) {
   document.getElementById('pgn').innerHTML = pgn;
     updateStatus();
 	//is (Black to move)
-
+sound();
 	document.getElementById('content').innerHTML = content;
   setRequest(game.fen());
   window.setTimeout(makeMove, 4000);
@@ -191,6 +188,11 @@ $(document).ready(init);
 
 $(document).ready(init);
 //---------------------------------------------------------------------
+function sound(){
+	document.getElementById('sound').innerHTML = '<audio autoplay preload controls> <source src="sound/move.wav" type="audio/wav" /> </audio>';}
+
+
+
 </script>
 
 
@@ -231,5 +233,7 @@ Content =  <span id="content"></span><br>
    </tr>
 </table>
 <p>Dr. R. Urban - dr.urban@netreal.de</p>
+
+  <span id="sound"></span>
 </body>
 </html>
