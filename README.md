@@ -5,6 +5,7 @@ Demo:
 
 It is based on: chessboard.js
 https://github.com/oakmac/chessboardjs
+
 ---------------------------------------------------------------------
 Install stockfish
 https://stockfishchess.org/
@@ -22,6 +23,7 @@ make profile-build ARCH=x86-32
 
 ./stockfish
 go infinite
+
 ---------------------------------------------------------------------
 Edit bot.php: $sf  = "C:/xampp/htdocs/netreal/Stockfish/src/stockfish.exe";
 
