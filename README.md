@@ -8,6 +8,8 @@ https://github.com/oakmac/chessboardjs
 
 1. Install stockfish
 https://stockfishchess.org/
+
+
 sudo apt-get install git g++
 git clone https://github.com/mcostalba/Stockfish.git
 cd Stockfish/src
