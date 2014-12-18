@@ -33,6 +33,32 @@ body,td,th {
 body {
 	background-color: #FFFFFF;
 }
+
+#Zeitweiss {
+position: relative;
+top: 0px;
+left: 0px;
+width: 200px;
+height: 26px;
+margin: 0px;
+padding: 0px;
+border: none;
+background-color: #666666;
+
+}
+#ZeitAnzeige {
+position: absolute;
+top: 0px;
+left: 0px;
+background: transparent;
+width: 200px;
+line-height: 26px;
+text-align: center;
+color: #FFFFFF;
+font-family: Verdana,Arial,Helvetica,sans-serif;
+font-size: 12px;
+font-weight: normal;
+}
 -->
 </style></head>
 <body>
@@ -242,10 +268,14 @@ document.getElementById('zeit_weiss').innerHTML = z_weiss;
      <h6>by Dr. R. Urban </h6></td>
    </tr>
    <tr>
-     <td align="left" valign="top">Zeit Wei&szlig;: <span id="zeit_weiss"></span></td>
+     <td align="left" valign="top"><div id="Zeitweiss">
+       <div id="ZeitAnzeige">Weiss: <span id="zeit_weiss"></span></div>
+     </div></td>
    </tr>
    <tr>
-     <td align="left" valign="top">Zeit Schwarz: <span id="zeit_schwarz"></span></td>
+     <td align="left" valign="top">  <div id="Zeitweiss">
+       <div id="ZeitAnzeige">Schwarz: <span id="zeit_schwarz"></span></div>
+     </div></td>
    </tr>
    <tr>
      <td align="left" valign="top"><a href="https://github.com/antiproton/Web-GUI-for-stockfish-chess" target="_blank">https://github.com/antiproton/Web-GUI-for-stockfish-chess</a></td>
