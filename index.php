@@ -56,6 +56,7 @@ var init = function() {
 
 document.getElementById('zeit_weiss').innerHTML = z_weiss;
 document.getElementById('zeit_schwarz').innerHTML = z_schwarz;
+document.getElementById('halbzuege').innerHTML = halbzuege;
 var board,
   game = new Chess();
 
@@ -190,6 +191,14 @@ var cfg = {
 board = new ChessBoard('board', cfg);
 //--- end example JS ---
 init_neu = function() {
+z_schwarz = 0;
+z_weiss = 0;
+halbzuege = 0;
+document.getElementById('zeit_weiss').innerHTML = z_weiss;
+document.getElementById('zeit_schwarz').innerHTML = z_schwarz;
+document.getElementById('halbzuege').innerHTML = halbzuege;
+window.clearInterval(Weiss_zeit);
+window.clearInterval(Schwarz_zeit);
 
 board = new ChessBoard('board', cfg);
 $(document).ready(init);
@@ -198,8 +207,6 @@ $(document).ready(init);
 
 };
 }; // end init()
-
-
 
 $(document).ready(init);
 //---------------------------------------------------------------------
