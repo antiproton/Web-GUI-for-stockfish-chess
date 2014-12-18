@@ -46,10 +46,16 @@ body {
 <script src="js/jquery-1.10.1.min.js"></script>
 <script src="js/chessboard.js"></script>
 <script>
-
+z_schwarz = 0;
+z_weiss = 0;
 content = 1;
+halbzuege = 0;
+
 var init = function() {
 //--- start example JS ---
+
+document.getElementById('zeit_weiss').innerHTML = z_weiss;
+document.getElementById('zeit_schwarz').innerHTML = z_schwarz;
 var board,
   game = new Chess();
 
@@ -91,15 +97,18 @@ if(content == 0){setRequest(game.fen());window.setTimeout(makeMove, 6000);}
     promotion: 'q' // NOTE: always promote to a queen for example simplicity
   });
 sound();
+ 
   board.position(game.fen());
    pgn=game.pgn();
   document.getElementById('pgn').innerHTML = pgn;
 
   updateStatus();
-
-
-content = 0;
-
+   content = 0;
+ // Zeit  
+ window.clearInterval(Schwarz_zeit);
+  Weiss_zeit = window.setInterval('ZeitAnzeigen_weiss()', 1000)
+halbzuege++;
+	document.getElementById('halbzuege').innerHTML = halbzuege;
 };
 
 var onDrop = function(source, target) {
@@ -122,6 +131,12 @@ var onDrop = function(source, target) {
 	//is (Black to move)
 sound();
 	document.getElementById('content').innerHTML = content;
+	
+	halbzuege++;
+	document.getElementById('halbzuege').innerHTML = halbzuege;
+	 // Zeit  
+if (halbzuege > 2) {window.clearInterval(Weiss_zeit);}
+	Schwarz_zeit = window.setInterval('ZeitAnzeigen_schwarz()', 1000)
   setRequest(game.fen());
   window.setTimeout(makeMove, 4000);
 };
@@ -190,8 +205,20 @@ $(document).ready(init);
 //---------------------------------------------------------------------
 function sound(){
 	document.getElementById('sound').innerHTML = '<audio autoplay preload controls> <source src="sound/move.wav" type="audio/wav" /> </audio>';}
+//---------------------------------------------------------------------
 
+// Zeit Schwarz
 
+function ZeitAnzeigen_schwarz(){
+z_schwarz++;
+document.getElementById('zeit_schwarz').innerHTML = z_schwarz;
+}
+
+// Zeit Weiss
+function ZeitAnzeigen_weiss(){
+z_weiss++;
+document.getElementById('zeit_weiss').innerHTML = z_weiss;
+}
 
 </script>
 
@@ -200,12 +227,18 @@ function sound(){
 
  <table width="100%"  border="0">
    <tr>
-     <td width="40%" rowspan="7"><!-- start example HTML --->
+     <td width="40%" rowspan="9"><!-- start example HTML --->
 
 <div id="board" style="width: 500px"></div>
 <!-- end example HTML ---></td>
      <td width="0" align="left" valign="top"><h1>Web GUI for Stockfish Chess</h1>
      <h6>by Dr. R. Urban </h6></td>
+   </tr>
+   <tr>
+     <td align="left" valign="top">Zeit Wei&szlig;: <span id="zeit_weiss"></span></td>
+   </tr>
+   <tr>
+     <td align="left" valign="top">Zeit Schwarz: <span id="zeit_schwarz"></span></td>
    </tr>
    <tr>
      <td align="left" valign="top"><a href="https://github.com/antiproton/Web-GUI-for-stockfish-chess" target="_blank">https://github.com/antiproton/Web-GUI-for-stockfish-chess</a></td>
@@ -215,6 +248,7 @@ function sound(){
  FEN =  <span id="fen"></span><br>
  BOT =  <span id="zug"></span><br>
  PGN =  <span id="pgn"></span><br><br>
+ Halbzuege = <span id="halbzuege"></span><br><br>
 Content =  <span id="content"></span><br>
 
  </td>
