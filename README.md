@@ -4,31 +4,19 @@ Demo:
 [http://netreal.de/bot-chess/](http://netreal.de/bot-chess/)
 
 It is based on: chessboard.js<br />
-https://github.com/oakmac/chessboardjs
-
-Install stockfish
-
-https://stockfishchess.org/
-
-sudo apt-get install git g++
-
-git clone https://github.com/mcostalba/Stockfish.git
-
-cd Stockfish/src
-
-make help
-
-make profile-build ARCH=x86-64
-
-make profile-build ARCH=x86-32
-
-./stockfish
-
-go infinite
-
-Edit config.php
-
-Program upload
+https://github.com/oakmac/chessboardjs<br />
+Install stockfish<br />
+https://stockfishchess.org/<br />
+sudo apt-get install git g++<br />
+git clone https://github.com/mcostalba/Stockfish.git<br />
+cd Stockfish/src<br />
+make help<br />
+make profile-build ARCH=x86-64<br />
+make profile-build ARCH=x86-32<br />
+./stockfish<br />
+go infinite<br />
+Edit config.php<br />
+Program upload<br />
 
 That is all!
 enjoy it
