@@ -4,12 +4,12 @@
 #  10.12.2014                                                                              #
 #  Released under the MIT license                                                          #
 #  https://github.com/antiproton                                                           #
+#  http://www.genialschach.de/                                                             #
 #------------------------------------------------------------------------------------------#
 session_start();
+include "config.php";
 
-
-
-   $_SESSION['code'] = "1234";
+   $_SESSION['code'] = $security_code;
 
 
 
@@ -33,8 +33,9 @@ body,td,th {
 body {
 	background-color: #FFFFFF;
 }
-
+#hideme {display: none;}
 #Zeitweiss {
+border-radius: 5px;
 position: relative;
 top: 0px;
 left: 0px;
@@ -124,14 +125,14 @@ if(content == 0){setRequest(game.fen());window.setTimeout(makeMove, 6000);}
     promotion: 'q' // NOTE: always promote to a queen for example simplicity
   });
 sound();
- 
+
   board.position(game.fen());
    pgn=game.pgn();
   document.getElementById('pgn').innerHTML = pgn;
 
   updateStatus();
    content = 0;
- // Zeit  
+ // Zeit
  window.clearInterval(Schwarz_zeit);
   Weiss_zeit = window.setInterval('ZeitAnzeigen_weiss()', 1000)
 halbzuege++;
@@ -158,10 +159,10 @@ var onDrop = function(source, target) {
 	//is (Black to move)
 sound();
 	document.getElementById('content').innerHTML = content;
-	
+
 	halbzuege++;
 	document.getElementById('halbzuege').innerHTML = halbzuege;
-	 // Zeit  
+	 // Zeit
 if (halbzuege > 2) {window.clearInterval(Weiss_zeit);}
 	Schwarz_zeit = window.setInterval('ZeitAnzeigen_schwarz()', 1000)
   setRequest(game.fen());
@@ -305,6 +306,8 @@ Content =  <span id="content"></span><br>
 </table>
 <p>Dr. R. Urban - dr.urban@netreal.de</p>
 
-  <span id="sound"></span>
+  <div id="hideme">
+ <span id="sound"></span>
+</div>
 </body>
 </html>
