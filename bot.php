@@ -6,10 +6,10 @@
 #  https://github.com/antiproton                                                           #
 #------------------------------------------------------------------------------------------#
 session_start();
-
+include "config.php";
 $code = $_SESSION['code'];
 
-if ($code !== "1234"){echo "Web GUI for Stockfish Chess by Dr. R. Urban"; exit;}
+if ($code !== $security_code){echo "Web GUI for Stockfish Chess by Dr. R. Urban"; exit;}
 
 #------------------------------------------------------------------------------------------#
 
@@ -23,7 +23,7 @@ $time = microtime(1);
 $cwd='./';
 
 
-$sf  = "C:/xampp/htdocs/netreal/Stockfish/src/stockfish.exe";
+$sf  = $pfad_stockfish;
 #$sf  = "/kunden/q/38/d375266227/htdocs/q/Stockfish/src/stockfish";
 
 
@@ -44,7 +44,7 @@ fwrite($pipes[0], "ucinewgame\n");
 fwrite($pipes[0], "isready\n");
 
 fwrite($pipes[0], "position fen $fen\n");
-fwrite($pipes[0], "go movetime 500\n");
+fwrite($pipes[0], "go movetime $thinking_time\n");
 
 $str="";
 
