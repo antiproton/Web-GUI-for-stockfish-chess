@@ -15,8 +15,6 @@ make profile-build ARCH=x86-64<br />
 make profile-build ARCH=x86-32<br />
 ./stockfish<br />
 go infinite<br />
+git clone https://github.com/antiproton/Web-GUI-for-stockfish-chess.git<br />
 Edit config.php<br />
-Program upload<br />
-
-That is all!
-enjoy it
+That is all!Enjoy it
