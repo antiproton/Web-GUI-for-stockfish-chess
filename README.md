@@ -24,9 +24,12 @@ make profile-build ARCH=x86-64
 make profile-build ARCH=x86-32
 
 ./stockfish
+
 go infinite
 
 Edit config.php
+
 Program upload
+
 That is all!
 enjoy it
