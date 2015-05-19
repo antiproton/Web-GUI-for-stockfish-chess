@@ -16,6 +16,7 @@ make profile-build ARCH=x86-32<br />
 ./stockfish<br />
 go infinite<br />
 
-2) git clone https://github.com/antiproton/Web-GUI-for-stockfish-chess.git<br />
+2) Install Web GUI for stockfish chess<br />
+git clone https://github.com/antiproton/Web-GUI-for-stockfish-chess.git<br />
 Edit config.php<br />
 That is all! Enjoy it
