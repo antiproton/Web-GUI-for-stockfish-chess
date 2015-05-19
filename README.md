@@ -22,6 +22,7 @@ Edit config.php<br />
 
 License
 =======
-Web GUI for stockfish chess is released under the MIT License.
+Web GUI for stockfish chess is released under the [MIT License.](https://github.com/antiproton/Web-GUI-for-stockfish-chess/blob/master/LICENSE)
+
 
  Enjoy it
