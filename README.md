@@ -19,4 +19,9 @@ go infinite<br />
 2) Install Web GUI for stockfish chess<br />
 git clone https://github.com/antiproton/Web-GUI-for-stockfish-chess.git<br />
 Edit config.php<br />
+
+License
+=======
+Web GUI for stockfish chess is released under the MIT License.
+
  Enjoy it
