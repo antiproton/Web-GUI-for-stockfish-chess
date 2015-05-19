@@ -1,7 +1,7 @@
  /* Web-GUI-for-stockfish-chess
 https://github.com/antiproton/Web-GUI-for-stockfish-chess
     Version vom 19.5.2015
-    Autor: Dr. Urban */
+    Autor: Dr. R. Urban */
 z_schwarz = 0;
 z_weiss = 0;
 content = 1;
@@ -182,5 +182,4 @@ function ZeitAnzeigen_weiss(){
 z_weiss++;
 document.getElementById('zeit_weiss').innerHTML = z_weiss;
 }
-
 
