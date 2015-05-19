@@ -1,9 +1,11 @@
 <?php
 #------------------------------------------------------------------------------------------#
 #  Copyright (c) Dr. R. Urban                                                              #
-#  03.04.2015                                                                              #
-#  Released under the MIT license                                                          #
+#  19.05.2015                                                                              #
+#  Web-GUI-for-stockfish-chess                                                             #
 #  https://github.com/antiproton                                                           #
+#  Released under the MIT license                                                          #
+#  https://github.com/antiproton/Web-GUI-for-stockfish-chess/blob/master/LICENSE           #
 #  http://www.genialschach.de/                                                             #
 #------------------------------------------------------------------------------------------#
 $security_code = "1234";
