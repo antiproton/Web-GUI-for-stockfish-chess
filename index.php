@@ -23,45 +23,9 @@ include "config.php";
 
 
   <link rel="stylesheet" href="css/chessboard.css" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><style type="text/css">
-<!--
-body,td,th {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 14px;
-	color: #666666;
-}
-body {
-	background-color: #FFFFFF;
-}
-#hideme {display: none;}
-#Zeitweiss {
-border-radius: 5px;
-position: relative;
-top: 0px;
-left: 0px;
-width: 200px;
-height: 26px;
-margin: 0px;
-padding: 0px;
-border: none;
-background-color: #666666;
-
-}
-#ZeitAnzeige {
-position: absolute;
-top: 0px;
-left: 0px;
-background: transparent;
-width: 200px;
-line-height: 26px;
-text-align: center;
-color: #FFFFFF;
-font-family: Verdana,Arial,Helvetica,sans-serif;
-font-size: 12px;
-font-weight: normal;
-}
--->
-</style></head>
+  <link rel="stylesheet" href="css/style.css" />
+  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
 <body>
 
 
@@ -106,7 +70,7 @@ font-weight: normal;
  BOT =  <span id="zug"></span><br>
  PGN =  <span id="pgn"></span><br><br>
  Halbzuege = <span id="halbzuege"></span><br><br>
-Content =  <span id="content"></span><br>
+Engine moved: =  <span id="content"></span><br>
 
  </td>
    </tr>
