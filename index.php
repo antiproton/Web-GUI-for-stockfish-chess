@@ -53,12 +53,12 @@ include "config.php";
    </tr>
    <tr>
      <td align="left" valign="top"><div id="Zeitweiss">
-       <div id="ZeitAnzeige">Weiss: <span id="zeit_weiss"></span></div>
+       <div id="ZeitAnzeige">Black: <span id="zeit_weiss"></span></div>
      </div></td>
    </tr>
    <tr>
      <td align="left" valign="top">  <div id="Zeitweiss">
-       <div id="ZeitAnzeige">Schwarz: <span id="zeit_schwarz"></span></div>
+       <div id="ZeitAnzeige">White: <span id="zeit_schwarz"></span></div>
      </div></td>
    </tr>
    <tr>
@@ -68,23 +68,24 @@ include "config.php";
      <td align="left" valign="top">
  FEN =  <span id="fen"></span><br>
  BOT =  <span id="zug"></span><br>
- PGN =  <span id="pgn"></span><br><br>
- Halbzuege = <span id="halbzuege"></span><br><br>
-Engine moved: =  <span id="content"></span><br>
-
+ PGN =  <span id="pgn"></span><br>
+ Halfmoves = <span id="halbzuege"></span><br>
+ Engine moved: =  <span id="content"></span><br>
+ STATUS = <span id="status"></span>
  </td>
    </tr>
    <tr>
-     <td align="left" valign="top">STATUS =  <span id="status"></span><br></td>
+     <td align="left" valign="top">  <input type="button" class="black-3c85d" id="flipOrientationBtn" value="Flip orientation" />
+     </td>
    </tr>
    <tr>
      <td align="left" valign="top">&nbsp;</td>
    </tr>
    <tr>
-     <td align="left" valign="top"><input type="button" onclick="init_neu()" value="init" /></td>
+     <td align="left" valign="top"><input type="button" class="black-3c85d" onclick="init_neu()" value="init" /></td>
    </tr>
    <tr>
-     <td align="left" valign="top"><a href="bot.php" target="_blank">Bot</a></td>
+     <td align="left" valign="top">&nbsp;</td>
    </tr>
 </table>
 <p>Dr. R. Urban - dr.urban@netreal.de</p>
