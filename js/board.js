@@ -27,7 +27,7 @@ var onDragStart = function(source, piece, position, orientation) {
 
 
 var makeMove = function() {
-
+sound();
 document.getElementById('fen').innerHTML = game.fen();
 document.getElementById('content').innerHTML = content;
 if(content == 0){setRequest(game.fen());window.setTimeout(makeMove, 6000);}
@@ -53,7 +53,7 @@ if(content == 0){setRequest(game.fen());window.setTimeout(makeMove, 6000);}
     to: zug_nach,
     promotion: 'q' // NOTE: always promote to a queen for example simplicity
   });
-sound();
+
 
   board.position(game.fen());
    pgn=game.pgn();
@@ -94,9 +94,20 @@ sound();
 	 // Zeit
 if (halbzuege > 2) {window.clearInterval(Weiss_zeit);}
 	Schwarz_zeit = window.setInterval('ZeitAnzeigen_schwarz()', 1000)
-  setRequest(game.fen());
+ setRequest(game.fen());
   window.setTimeout(makeMove, 4000);
 };
+
+var zug_zeigen = function () {
+
+document.getElementById('fen').innerHTML = game.fen();
+
+setRequest(game.fen());
+
+document.getElementById('content').innerHTML = content;
+makeMove();
+ 
+}
 
 // update the board position after the piece snap
 // for castling, en passant, pawn promotion
@@ -145,6 +156,8 @@ var cfg = {
   onSnapEnd: onSnapEnd
 };
 board = new ChessBoard('board', cfg);
+  $('#zeigen').on('click', zug_zeigen);
+$('#flipOrientationBtn').on('click', board.flip);
 //--- end example JS ---
 init_neu = function() {
 z_schwarz = 0;
@@ -182,4 +195,3 @@ function ZeitAnzeigen_weiss(){
 z_weiss++;
 document.getElementById('zeit_weiss').innerHTML = z_weiss;
 }
-
