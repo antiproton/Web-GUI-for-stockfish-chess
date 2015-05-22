@@ -8,11 +8,7 @@
 #------------------------------------------------------------------------------------------#
 session_start();
 include "config.php";
-
-   $_SESSION['code'] = $security_code;
-
-
-
+$_SESSION['code'] = $security_code;
 ?>
 <!doctype html>
 <html>
@@ -53,12 +49,12 @@ include "config.php";
    </tr>
    <tr>
      <td align="left" valign="top"><div id="Zeitweiss">
-       <div id="ZeitAnzeige">Black: <span id="zeit_weiss"></span></div>
+       <div id="ZeitAnzeige">White: <span id="zeit_weiss"></span></div>
      </div></td>
    </tr>
    <tr>
      <td align="left" valign="top">  <div id="Zeitweiss">
-       <div id="ZeitAnzeige">White: <span id="zeit_schwarz"></span></div>
+       <div id="ZeitAnzeige">Black: <span id="zeit_schwarz"></span></div>
      </div></td>
    </tr>
    <tr>
@@ -79,7 +75,15 @@ include "config.php";
      </td>
    </tr>
    <tr>
-     <td align="left" valign="top">&nbsp;</td>
+     <td align="left" valign="top"> 
+	 <?php
+if ($show_move=="true"){
+echo<<< eof
+	 <input type="button" id="zeigen" value="SHOW MOVE" /> 
+eof;
+}
+	 ?>
+     &nbsp;</td>
    </tr>
    <tr>
      <td align="left" valign="top"><input type="button" class="black-3c85d" onclick="init_neu()" value="init" /></td>
