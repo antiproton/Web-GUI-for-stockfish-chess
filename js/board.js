@@ -101,12 +101,14 @@ if (halbzuege > 2) {window.clearInterval(Weiss_zeit);}
 var zug_zeigen = function () {
 
 document.getElementById('fen').innerHTML = game.fen();
+    setRequest(game.fen());
 
-setRequest(game.fen());
+     window.setTimeout(makeMove, 3000);
 
 document.getElementById('content').innerHTML = content;
-makeMove();
- 
+
+//makeMove();
+
 }
 
 // update the board position after the piece snap
