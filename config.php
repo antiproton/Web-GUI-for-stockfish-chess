@@ -15,4 +15,5 @@ $pfad_stockfish  = "C:/xampp/htdocs/netreal/Stockfish/src/stockfish.exe";
 #------------------------------------
 $thinking_time = 500; # milliseconds
 #------------------------------------
+$show_move = "false"; #false
 ?>
