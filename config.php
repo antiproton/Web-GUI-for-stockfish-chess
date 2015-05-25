@@ -1,7 +1,7 @@
 <?php
 #------------------------------------------------------------------------------------------#
 #  Copyright (c) Dr. R. Urban                                                              #
-#  19.05.2015                                                                              #
+#  24.05.2015                                                                              #
 #  Web-GUI-for-stockfish-chess                                                             #
 #  https://github.com/antiproton                                                           #
 #  Released under the MIT license                                                          #
@@ -11,9 +11,9 @@
 $security_code = "1234";
 #------------------------------------
 $pfad_stockfish  = "C:/xampp/htdocs/netreal/Stockfish/src/stockfish.exe";
-#$pfad_stockfish  = "/htdocs/netreal/Stockfish/src/stockfish";
+#$pfad_stockfish   = "/d375266227/htdocs/netreal/Stockfish/src/stockfish";
 #------------------------------------
 $thinking_time = 500; # milliseconds
 #------------------------------------
-$show_move = "false"; #false / true
+
 ?>
