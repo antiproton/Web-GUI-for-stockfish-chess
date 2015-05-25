@@ -1,4 +1,5 @@
-var request = false;
+
+	var request = false;
 
 	// Request senden
 	function setRequest(value) {
@@ -26,7 +27,7 @@ var request = false;
 			// Requestheader senden
 			request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 			// Request senden
-			request.send('Daten='+value);
+			request.send('fen='+value);
 			// Request auswerten
 			request.onreadystatechange = interpretRequest;
 		}
@@ -38,18 +39,11 @@ var request = false;
 			// wenn der readyState 4 und der request.status 200 ist, dann ist alles korrekt gelaufen
 			case 4:
 				if (request.status != 200) {
-					//alert("Der Request wurde abgeschlossen, ist aber nicht OK\nFehler:"+request.status);
-					setRequest(value);
-
+					alert("Der Request wurde abgeschlossen, ist aber nicht OK\nFehler:"+request.status);
 				} else {
 					 content = request.responseText;
 					// den Inhalt des Requests in das <div> schreiben
-
 					//document.getElementById('content').innerHTML = content;
-				//ausgabe(content);
-					//Daten_Ausgabe(content);
-
-
 				}
 				break;
 			default:
