@@ -27,7 +27,17 @@ body,td,th {
 }
 #hideme {display: none;}
 -->
-</style></head>
+</style>
+<script src="js/chess.js"></script>
+<script src="js/json3.min.js"></script>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/chessboard.js"></script>
+<script src="js/ajax.js"></script>
+<script src="js/board.js"></script>
+
+
+
+</head>
 <body>
 
 
@@ -41,11 +51,13 @@ body,td,th {
   </tr>
   <tr>
     <td align="left" valign="top"><h1>Web GUI for Stockfish Chess</h1>
-    <p>by. Dr. R. Urban</p></td>
+    <p>by. Dr. R. Urban</p>
+    <p><a href="https://github.com/antiproton/Web-GUI-for-stockfish-chess">https://github.com/antiproton/Web-GUI-for-stockfish-chess</a></p></td>
   </tr>
   <tr>
     <td>Sound:
-      <input type="checkbox" id="soundcheck" onClick="soundcheck()" value="checkbox" checked>      <br />
+      <input type="checkbox" id="soundcheck" onClick="soundcheck()" value="checkbox" checked>      
+      Thinktime: <?php echo $thinking_time ?> milliseconds Movetime: 2 seconds <br />
 	  <input type="button" id="whiteOrientationBtn" value="White orientation" />
   <input type="button" id="blackOrientationBtn" value="Black orientation" />
   <input type="button" id="flipOrientationBtn" value="Flip orientation" />
@@ -84,26 +96,8 @@ body,td,th {
   </tr>
 </table>
 
-
-
-
-
-
-
-
-<!-- Copyright (c) Dr. R. Urban --->
-<script src="js/chess.js"></script>
-<script src="js/json3.min.js"></script>
-<script src="js/jquery-1.10.1.min.js"></script>
-<script src="js/chessboard.js"></script>
-<script src="js/ajax.js"></script>
-<script src="js/ajax.js"></script>
-<script src="js/board.js"></script>
-
  <div id="hideme">
  <span id="sound"></span>
 </div>
-
-
 </body>
 </html>
