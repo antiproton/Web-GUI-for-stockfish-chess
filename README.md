@@ -3,9 +3,9 @@ Web GUI for stockfish chess
 Demo:
 [http://netreal.de/bot-chess/](http://netreal.de/bot-chess/)
 
-Basis: Chessboard.js 
+Basis: Chessboard.js
 https://github.com/oakmac/chessboardjs<br />
-Basis: Stockfish 
+Basis: Stockfish
 https://stockfishchess.org/<br />
 1) Install stockfish<br />
 sudo apt-get install git g++<br />
@@ -27,4 +27,3 @@ Web GUI for stockfish chess is released under the [MIT License.](https://github.
 
 
 It works! Enjoy it!<br />
-A bad day with chess is better than a good day at work!
