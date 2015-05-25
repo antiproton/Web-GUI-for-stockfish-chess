@@ -91,7 +91,7 @@ body,td,th {
 
 
 
-<!-- end example HTML --->
+<!-- Copyright (c) Dr. R. Urban --->
 <script src="js/chess.js"></script>
 <script src="js/json3.min.js"></script>
 <script src="js/jquery-1.10.1.min.js"></script>
