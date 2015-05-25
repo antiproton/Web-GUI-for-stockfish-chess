@@ -1,4 +1,12 @@
-
+/*!
+ * 
+ *
+ * Copyright 2015 Dr.R.Urban
+ * Released under the MIT license
+ * https://github.com/antiproton
+ *
+ * Date: 25.5.2015
+ */
 	var request = false;
 
 	// Request senden

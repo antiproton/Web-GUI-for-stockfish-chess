@@ -1,4 +1,12 @@
-
+/*!
+ * 
+ *
+ * Copyright 2015 Dr.R.Urban
+ * Released under the MIT license
+ * https://github.com/antiproton
+ *
+ * Date: 25.5.2015
+ */
 var init = function() {
 
 //--- start example JS ---
@@ -19,11 +27,11 @@ var onDragStart = function(source, piece, position, orientation) {
 };
 function makemove () {
   setRequest(game.fen());
-  setTimeout(function(){ document.getElementById('content').innerHTML = content; 
+  setTimeout(function(){ document.getElementById('content').innerHTML = content;
   ziehen(content);
-  
+
   }, 1500);
- 
+
 };
 function ziehen(zug) {
 
@@ -64,7 +72,7 @@ var onDrop = function(source, target) {
   makemove();
 };
 
-// update the board position after the piece snap 
+// update the board position after the piece snap
 // for castling, en passant, pawn promotion
 var onSnapEnd = function() {
   board.position(game.fen());
@@ -97,7 +105,7 @@ var updateStatus = function() {
       status += ', ' + moveColor + ' is in check';
     }
   }
-if(s == 'true'){sound();}
+if(s != false){sound();}
   statusEl.html(status);
   fenEl.html(game.fen());
   pgnEl.html(game.pgn());
@@ -127,9 +135,9 @@ $('#blackOrientationBtn').on('click', function() {
 
 $('#move').on('click',  function() {
 setRequest(game.fen());
-  setTimeout(function(){ document.getElementById('content').innerHTML = content; 
+  setTimeout(function(){ document.getElementById('content').innerHTML = content;
   ziehen(content);
-  
+
   }, 2000);
 
 });
@@ -143,5 +151,5 @@ function sound(){
 s ='true';
 function soundcheck() {
     s = document.getElementById("soundcheck").checked;
-  
+document.getElementById('test').innerHTML = s;
 }
