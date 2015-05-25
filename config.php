@@ -8,10 +8,10 @@
 #  https://github.com/antiproton/Web-GUI-for-stockfish-chess/blob/master/LICENSE           #
 #  http://www.genialschach.de/                                                             #
 #------------------------------------------------------------------------------------------#
-$security_code = "1234";
+$security_code = "1534";
 #------------------------------------
 $pfad_stockfish  = "C:/xampp/htdocs/netreal/Stockfish/src/stockfish.exe";
-#$pfad_stockfish   = "/d375266227/htdocs/netreal/Stockfish/src/stockfish";
+#$pfad_stockfish   = "/kunden/homepages/38/d375266227/htdocs/netreal/Stockfish/src/stockfish";
 #------------------------------------
 $thinking_time = 500; # milliseconds
 #------------------------------------
