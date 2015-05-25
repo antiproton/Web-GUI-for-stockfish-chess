@@ -1,9 +1,11 @@
 <?php
 #------------------------------------------------------------------------------------------#
 #  Copyright (c) Dr. R. Urban                                                              #
-#  10.12.2014                                                                              #
-#  Released under the MIT license                                                          #
+#  24.05.2015                                                                              #
+#  Web-GUI-for-stockfish-chess                                                             #
 #  https://github.com/antiproton                                                           #
+#  Released under the MIT license                                                          #
+#  https://github.com/antiproton/Web-GUI-for-stockfish-chess/blob/master/LICENSE           #
 #------------------------------------------------------------------------------------------#
 session_start();
 include "config.php";
@@ -11,12 +13,10 @@ $code = $_SESSION['code'];
 
 if ($code !== $security_code){echo "Web GUI for Stockfish Chess by Dr. R. Urban"; exit;}
 
-#------------------------------------------------------------------------------------------#
-
-$fen = $_POST['Daten'];
+$fen = $_POST['fen'];
 if ($fen == ""){echo "Web GUI for Stockfish Chess by Dr. R. Urban - Stockfish 061214 by Tord Romstad, Marco Costalba and Joona Kiiski ";exit;}
 
-#if ("localhost" != $_SERVER["HTTP_HOST"]){echo "no"; exit;}
+
 
 
 $time = microtime(1);
@@ -24,9 +24,6 @@ $cwd='./';
 
 
 $sf  = $pfad_stockfish;
-#$sf  = "/kunden/q/38/d375266227/htdocs/q/Stockfish/src/stockfish";
-
-
 
 
 $descriptorspec = array(
@@ -81,10 +78,12 @@ proc_close($process);
 
 }
 
-
+header('Content-Type: text/html; charset=utf-8'); // sorgt für die korrekte Kodierung
+header('Cache-Control: must-revalidate, pre-check=0, no-store, no-cache, max-age=0, post-check=0'); // ist mal wieder wichtig wegen IE
 echo $str[0].$str[1]."-".$str[2].$str[3];
 exit;
 #echo "<br>";
 #echo microtime(1)-$time;
+
 
 ?>
