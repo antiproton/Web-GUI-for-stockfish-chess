@@ -1,5 +1,5 @@
 /*!
- * 
+ *
  *
  * Copyright 2015 Dr.R.Urban
  * Released under the MIT license
@@ -8,7 +8,7 @@
  * Date: 25.5.2015
  */
 var init = function() {
-
+selfplay = false;
 //--- start example JS ---
 var board,
   game = new Chess(),
@@ -25,7 +25,7 @@ var onDragStart = function(source, piece, position, orientation) {
     return false;
   }
 };
-function makemove () {
+function makemove() {
   setRequest(game.fen());
   setTimeout(function(){ document.getElementById('content').innerHTML = content;
   ziehen(content);
@@ -53,6 +53,8 @@ function ziehen(zug) {
   board.position(game.fen());
   updateStatus();
 document.getElementById('fen').innerHTML = game.fen();
+if(selfplay != false){makemove();}
+
 };
 
 
@@ -109,6 +111,8 @@ if(s != false){sound();}
   statusEl.html(status);
   fenEl.html(game.fen());
   pgnEl.html(game.pgn());
+ captured_pieces(game.fen());
+  
 };
 
 var cfg = {
@@ -141,6 +145,8 @@ setRequest(game.fen());
   }, 2000);
 
 });
+
+
 //--- end example JS ---
 
 }; // end init()
@@ -151,5 +157,11 @@ function sound(){
 s ='true';
 function soundcheck() {
     s = document.getElementById("soundcheck").checked;
-document.getElementById('test').innerHTML = s;
+
 }
+function stockfcheck() {
+    selfplay = document.getElementById("stockfcheck").checked;
+//if(selfplay != false){makemove();}
+//document.getElementById('test').innerHTML = selfplay;
+}
+
