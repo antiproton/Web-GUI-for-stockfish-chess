@@ -26,6 +26,10 @@ body,td,th {
 	font-family: Arial, Helvetica, sans-serif;
 }
 #hideme {display: none;}
+.Stil1 {font-size: 12px}
+.Stil2 {font-size: 12}
+.Stil3 {color: #FFFFFF}
+.Stil4 {font-size: 12px; color: #FFFFFF; }
 -->
 </style>
 <script src="js/chess.js"></script>
@@ -34,7 +38,7 @@ body,td,th {
 <script src="js/chessboard.js"></script>
 <script src="js/ajax.js"></script>
 <script src="js/board.js"></script>
-
+<script src="js/captured_pieces.js"></script>
 
 
 </head>
@@ -44,42 +48,40 @@ body,td,th {
 <!--  Copyright (c) Dr. R. Urban    --->
 <table width="100%"  border="0">
   <tr>
-    <td width="33%" rowspan="10"><div id="board" style="width: 450px"></div></td>
-    <td width="67%">
+    <td width="38%" rowspan="8" valign="top"><div id="board" style="width: 450px"></div>
+	<span id="captured_pieces"></span></td>
+    <td width="62%">
  
   </td>
   </tr>
   <tr>
     <td align="left" valign="top"><h1>Web GUI for Stockfish Chess</h1>
-    <p>by. Dr. R. Urban</p>
-    <p><a href="https://github.com/antiproton/Web-GUI-for-stockfish-chess">https://github.com/antiproton/Web-GUI-for-stockfish-chess</a></p></td>
+    <p><em><strong>by. Dr. R. Urban</strong></em><br>
+      <span class="Stil2"><span class="Stil3"><span class="Stil1"><a href="https://github.com/antiproton/Web-GUI-for-stockfish-chess" target="_blank" class="Stil1">https://github.com/antiproton/Web-GUI-for-stockfish-chess</a></span></span></span></p>
+    <p class="Stil4"><a href="http://chessboardjs.com/" target="_blank">http://chessboardjs.com/</a></p>
+    <p><span class="Stil4"><a href="https://stockfishchess.org/" target="_blank">https://stockfishchess.org/</a></span></p></td>
   </tr>
   <tr>
-    <td>Sound:
-      <input type="checkbox" id="soundcheck" onClick="soundcheck()" value="checkbox" checked>      
-      Thinktime: <?php echo $thinking_time ?> milliseconds Movetime: 2 seconds <br />
-	  <input type="button" id="whiteOrientationBtn" value="White orientation" />
-  <input type="button" id="blackOrientationBtn" value="Black orientation" />
-  <input type="button" id="flipOrientationBtn" value="Flip orientation" />
-	  
-	
-    </td>
+    <td><p>Sound:
+        <input type="checkbox" id="soundcheck" onClick="soundcheck()" value="checkbox" checked>      
+      Stockfish vs. Stockfish:<span id="result_box" class="short_text" lang="en"> </span>
+      <input type="checkbox" id="stockfcheck" onClick="stockfcheck()" value="checkbox">
+      </p>
+      <p><strong>Thinktime: <?php echo $thinking_time ?> milliseconds</strong></p>
+      <p><strong> Movetime: 2 seconds</strong></p>
+      <p><br />
+        <input type="button" id="whiteOrientationBtn" value="White orientation" />
+        <input type="button" id="blackOrientationBtn" value="Black orientation" />
+        <input type="button" id="flipOrientationBtn" value="Flip orientation" />
+      </p></td>
   </tr>
   <tr>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td><p>
+    <td height="0" valign="top"><p>
         <input type="button" id="move" value="MOVE" /> 
         </p>
-      <p><br>   
-      </p>
       <form name="form1" method="post" action="">
       <input type="submit" name="Submit" value="INIT">
     </form></td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
   </tr>
   <tr>
     <td>Engine moved: 
@@ -94,10 +96,16 @@ body,td,th {
   <tr>
     <td>PGN: <span id="pgn"></span></td>
   </tr>
+  <tr>
+    <td></td>
+    <td>&nbsp;</td>
+  </tr>
 </table>
 
  <div id="hideme">
  <span id="sound"></span>
 </div>
+
+
 </body>
 </html>
