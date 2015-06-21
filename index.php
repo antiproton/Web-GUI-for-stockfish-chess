@@ -49,7 +49,11 @@ body,td,th {
 <table width="100%"  border="0">
   <tr>
     <td width="38%" rowspan="8" valign="top"><div id="board" style="width: 450px"></div>
-	<span id="captured_pieces"></span></td>
+	  <p><span id="captured_pieces_w"></span><br><br>
+      </p>
+	        <span id="captured_pieces_b"></span>
+	    
+      <hr align="left" width="450" size="1" /> </td>
     <td width="62%">
  
   </td>
