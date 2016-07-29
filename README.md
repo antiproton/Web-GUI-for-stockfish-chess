@@ -6,7 +6,7 @@ Demo 2: [http://www.genialchess.de/](http://www.genialchess.de/)<br /><br />
 Basis: Chessboard.js
 https://github.com/oakmac/chessboardjs<br />
 Basis: Stockfish
-https://stockfishchess.org/<br />
+https://stockfishchess.org/<br /><br />
 1) Install stockfish<br />
 sudo apt-get install git g++<br />
 git clone https://github.com/mcostalba/Stockfish.git<br />
