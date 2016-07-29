@@ -2,7 +2,7 @@ Web GUI for stockfish chess
 ===========================
 Demo:
 [http://netreal.de/bot-chess/](http://netreal.de/bot-chess/)<br />
-[http://www.genialschach.de/](http://www.genialschach.de/)<br />
+and [http://www.genialschach.de/](http://www.genialschach.de/)<br />
 Basis: Chessboard.js
 https://github.com/oakmac/chessboardjs<br />
 Basis: Stockfish
