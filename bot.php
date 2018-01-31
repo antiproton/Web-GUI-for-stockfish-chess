@@ -74,6 +74,7 @@ $str = $zug;
 
 fclose($pipes[0]);
 fclose($pipes[1]);
+proc_terminate($process);
 proc_close($process);
 
 }
